@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+  </body>
+  <script type="text/javascript">
+    axios.get('/call/users')
+      .then(result => console.log(result.data))
+      .catch(ex => console.log(ex))
+    axios.get('/call/items')
+      .then(result => console.log(result.data))
+      .catch(ex => console.log(ex))      
+  </script>
+</html>
