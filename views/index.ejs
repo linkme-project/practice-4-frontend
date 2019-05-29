@@ -10,10 +10,10 @@
     <p>Welcome to <%= title %></p>
   </body>
   <script type="text/javascript">
-    axios.get('/call/users')
+    axios.get('/users')
       .then(result => console.log(result.data))
       .catch(ex => console.log(ex))
-    axios.get('/call/items')
+    axios.get('/items')
       .then(result => console.log(result.data))
       .catch(ex => console.log(ex))      
   </script>
